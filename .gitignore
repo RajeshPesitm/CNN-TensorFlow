@@ -1,0 +1,41 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual environments
+venv/
+env/
+my-tf-env/
+*.egg-info/
+tensorboard-env/
+*env/
+*venv/
+
+# Jupyter / IPython
+.ipynb_checkpoints/
+
+# PyTorch / Torchvision datasets
+data/
+emnist_digits/
+
+# Model checkpoints
+*.pt
+*.pth
+
+# Logs, TensorBoard, etc.
+logs/
+runs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Pickle files (large datasets)
+*.pickle
+*.pkl
+
+# Ignore dataset zips in case someone downloads them manually
+*.gz
+*.zip
