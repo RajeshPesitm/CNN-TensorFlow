@@ -1,0 +1,23 @@
+# Python cache files
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual environment
+my-tf-env/
+tensorboard-env/
+venv/
+env/
+*env/
+
+# Logs
+logs/
+*.log
+
+# Pickle files (large datasets)
+*.pickle
+*.pkl
+
+# OS files
+.DS_Store
+Thumbs.db
