@@ -24,18 +24,17 @@ transform = transforms.Compose([
 # -----------------------------
 # 3️⃣ Load MNIST for training
 # -----------------------------
-train_dataset = datasets.MNIST(root="data", train=True, download=True, transform=transform)
-train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
-
-# -----------------------------
-# 4️⃣ Load EMNIST digits for testing
-# -----------------------------
 # Rotate EMNIST digits to match MNIST orientation
 emnist_transform = transforms.Compose([
     transforms.ToTensor(),
-    transforms.Lambda(lambda x: x.transpose(1, 2))
+    transforms.Lambda(lambda x: x.transpose(1, 2))   # comment / Uncomment
 ])
+train_dataset = datasets.EMNIST(root="data", split="digits", train=True, download=True, transform=emnist_transform)
+train_loader = DataLoader(train_dataset, batch_size=64, shuffle=True)
 
+# -----------------------------
+# 4️⃣ Load MNIST digits for testing
+# -----------------------------
 test_dataset = datasets.EMNIST(root="data", split="digits", train=False, download=True, transform=emnist_transform)
 test_loader = DataLoader(test_dataset, batch_size=64, shuffle=False)
 
